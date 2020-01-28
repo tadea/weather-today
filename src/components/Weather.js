@@ -1,9 +1,8 @@
 import React from "react";
 
 class Weather extends React.Component {
-  state = {};
   render() {
-    return <div>This will display Weather</div>;
+    return <div>DISPLAY WEATHER HERE</div>;
   }
 }
 
