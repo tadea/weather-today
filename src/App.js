@@ -13,10 +13,21 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
-    // displayUnits: "F",
+    displayUnits: "F",
     error: undefined,
     timezone: undefined
   };
+
+  toggleDisplayUnits() {
+    this.state.displayUnits === "F"
+      ? this.setState({
+          displayUnits: "C"
+        })
+      : this.setState({
+          displayUnits: "F"
+        });
+  }
+
   getWeather = async e => {
     e.preventDefault();
     const city = e.target.elements.city.value;
@@ -64,7 +75,8 @@ class App extends React.Component {
           country={this.state.country}
           humidity={this.state.humidity}
           description={this.state.description}
-          timezone={this.state.timezone}
+          displayUnits={this.state.displayUnits}
+          clickHandler={this.toggleDisplayUnits.bind(this)}
           error={this.state.error}
         />
       </div>
