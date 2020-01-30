@@ -15,7 +15,7 @@ class Weather extends React.Component {
       <div>
         {this.props.city && this.props.country && (
           <p>
-            Location:
+            Location:{" "}
             <span>
               {this.props.city}, {this.props.country}
             </span>
@@ -35,9 +35,31 @@ class Weather extends React.Component {
             </span>
           </p>
         )}
+        {this.props.tempMin && this.props.tempMax && (
+          <p>
+            Temperature Min/Max:{" "}
+            <span onClick={this.handleClicked.bind(this)}>
+              {this.calculateTemp(this.props.tempMin, this.props.displayUnits)}
+              &deg;{this.props.displayUnits} |
+              {this.calculateTemp(this.props.tempMax, this.props.displayUnits)}
+              &deg;
+              {this.props.displayUnits}
+            </span>
+          </p>
+        )}
+        {/* {this.props.tempMax && (
+          <p>
+            Temperature Max:{" "}
+            <span onClick={this.handleClicked.bind(this)}>
+              {this.calculateTemp(this.props.tempMax, this.props.displayUnits)}
+              &deg;
+              {this.props.displayUnits}
+            </span>
+          </p>
+        )} */}
         {this.props.humidity && (
           <p>
-            Humidity: <span>{this.props.humidity}</span>
+            Humidity: <span>{this.props.humidity}%</span>
           </p>
         )}
         {this.props.description && (
@@ -49,6 +71,25 @@ class Weather extends React.Component {
         {this.props.error && (
           <p>
             <span>{this.props.error}</span>
+          </p>
+        )}
+        {this.props.pressure && (
+          <p>
+            Pressure: <span>{this.props.pressure}hPa</span>
+          </p>
+        )}
+
+        {this.props.error && (
+          <p>
+            <span>{this.props.error}</span>
+          </p>
+        )}
+        {this.props.icon && (
+          <p>
+            <img
+              src={`http://openweathermap.org/img/w/${this.props.icon}.png`}
+              alt="wthr img"
+            />
           </p>
         )}
       </div>
