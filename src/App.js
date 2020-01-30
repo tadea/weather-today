@@ -9,13 +9,16 @@ const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 class App extends React.Component {
   state = {
     kelvinTemp: undefined,
+    tempMin: undefined,
+    tempMax: undefined,
     city: undefined,
     country: undefined,
     humidity: undefined,
     description: undefined,
+    pressure: undefined,
     displayUnits: "F",
     error: undefined,
-    timezone: undefined
+    icon: undefined
   };
 
   toggleDisplayUnits() {
@@ -42,23 +45,29 @@ class App extends React.Component {
     if (city && country) {
       this.setState({
         kelvinTemp: data.main.temp,
+        tempMin: data.main.temp_min,
+        tempMax: data.main.temp_max,
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        description: data.weather[0].main,
+        description: data.weather[0].description,
+        pressure: data.main.pressure,
         unit: data.main.temp,
         error: "",
-        timezone: data.timezone
+        icon: data.weather[0].icon
       });
     } else {
       this.setState({
         kelvinTemp: undefined,
+        tempMin: undefined,
+        tempMax: undefined,
         city: undefined,
         country: undefined,
         humidity: undefined,
         description: undefined,
+        pressure: undefined,
         unit: undefined,
-        timezone: undefined,
+        icon: undefined,
         error: "Please Enter Correct Values"
       });
     }
@@ -71,13 +80,17 @@ class App extends React.Component {
         <Form getWeather={this.getWeather} />
         <Weather
           kelvinTemp={this.state.kelvinTemp}
+          tempMin={this.state.tempMin}
+          tempMax={this.state.tempMax}
           city={this.state.city}
           country={this.state.country}
           humidity={this.state.humidity}
           description={this.state.description}
+          pressure={this.state.pressure}
           displayUnits={this.state.displayUnits}
           clickHandler={this.toggleDisplayUnits.bind(this)}
           error={this.state.error}
+          icon={this.state.icon}
         />
       </div>
     );
