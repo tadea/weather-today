@@ -75,23 +75,33 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Title />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          kelvinTemp={this.state.kelvinTemp}
-          tempMin={this.state.tempMin}
-          tempMax={this.state.tempMax}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          pressure={this.state.pressure}
-          displayUnits={this.state.displayUnits}
-          clickHandler={this.toggleDisplayUnits.bind(this)}
-          error={this.state.error}
-          icon={this.state.icon}
-        />
+      <div className="wrapper">
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-5 title-container">
+                <Title />
+              </div>
+              <div className="col-xs-7 form-container">
+                <Form getWeather={this.getWeather} />
+                <Weather
+                  kelvinTemp={this.state.kelvinTemp}
+                  tempMin={this.state.tempMin}
+                  tempMax={this.state.tempMax}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  pressure={this.state.pressure}
+                  displayUnits={this.state.displayUnits}
+                  clickHandler={this.toggleDisplayUnits.bind(this)}
+                  error={this.state.error}
+                  icon={this.state.icon}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

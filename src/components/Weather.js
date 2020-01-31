@@ -12,21 +12,24 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="weather__info">
         {this.props.city && this.props.country && (
-          <p>
+          <p className="weather__key">
             {" "}
             <i className="fas fa-location-arrow"></i> Location:{" "}
-            <span>
+            <span className="weather__value">
               {this.props.city}, {this.props.country}
             </span>
           </p>
         )}
 
         {this.props.kelvinTemp && (
-          <p>
+          <p className="weather__key">
             <i className="fas fa-thermometer-three-quarters"></i> Temperature:{" "}
-            <span onClick={this.handleClicked.bind(this)}>
+            <span
+              onClick={this.handleClicked.bind(this)}
+              className="weather__value"
+            >
               {this.calculateTemp(
                 this.props.kelvinTemp,
                 this.props.displayUnits
@@ -37,10 +40,13 @@ class Weather extends React.Component {
           </p>
         )}
         {this.props.tempMin && this.props.tempMax && (
-          <p>
+          <p className="weather__key">
             {" "}
-            <i className="fas fa-sort"></i> Temperature Min/Max:{" "}
-            <span onClick={this.handleClicked.bind(this)}>
+            <i className="fas fa-sort"></i> Min/Max:{" "}
+            <span
+              onClick={this.handleClicked.bind(this)}
+              className="weather__value"
+            >
               {this.calculateTemp(this.props.tempMin, this.props.displayUnits)}
               &deg;{this.props.displayUnits} |
               {this.calculateTemp(this.props.tempMax, this.props.displayUnits)}
@@ -50,32 +56,32 @@ class Weather extends React.Component {
           </p>
         )}
         {this.props.humidity && (
-          <p>
+          <p className="weather__key">
             {" "}
             <i className="fas fa-tint"></i> Humidity:{" "}
-            <span>{this.props.humidity}%</span>
+            <span className="weather__value">{this.props.humidity}%</span>
           </p>
         )}
         {this.props.description && (
-          <p>
+          <p className="weather__key">
             {" "}
             <i className="fas fa-bars"></i> Condition:{" "}
-            <span>{this.props.description}</span>
+            <span className="weather__value">{this.props.description}</span>
           </p>
         )}
         {this.props.pressure && (
-          <p>
+          <p className="weather__key">
             {" "}
             <i className="fas fa-wind"></i> Pressure:{" "}
-            <span>{this.props.pressure} hPa</span>
+            <span className="weather__value">{this.props.pressure} hPa</span>
           </p>
         )}
 
         {this.props.error && (
-          <p>
+          <p className="weather__key">
             {" "}
             <i className="fas fa-exclamation"></i>{" "}
-            <span>{this.props.error}</span>
+            <span className="weather__value">{this.props.error}</span>
           </p>
         )}
         {this.props.icon && (
