@@ -41,7 +41,7 @@ class App extends React.Component {
     );
 
     const data = await api_call.json();
-    console.log(data);
+
     if (city && country) {
       this.setState({
         kelvinTemp: data.main.temp,
