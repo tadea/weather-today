@@ -15,7 +15,8 @@ class Weather extends React.Component {
       <div>
         {this.props.city && this.props.country && (
           <p>
-            Location:{" "}
+            {" "}
+            <i className="fas fa-location-arrow"></i> Location:{" "}
             <span>
               {this.props.city}, {this.props.country}
             </span>
@@ -24,7 +25,7 @@ class Weather extends React.Component {
 
         {this.props.kelvinTemp && (
           <p>
-            Temperature:{" "}
+            <i className="fas fa-thermometer-three-quarters"></i> Temperature:{" "}
             <span onClick={this.handleClicked.bind(this)}>
               {this.calculateTemp(
                 this.props.kelvinTemp,
@@ -37,7 +38,8 @@ class Weather extends React.Component {
         )}
         {this.props.tempMin && this.props.tempMax && (
           <p>
-            Temperature Min/Max:{" "}
+            {" "}
+            <i className="fas fa-sort"></i> Temperature Min/Max:{" "}
             <span onClick={this.handleClicked.bind(this)}>
               {this.calculateTemp(this.props.tempMin, this.props.displayUnits)}
               &deg;{this.props.displayUnits} |
@@ -47,40 +49,32 @@ class Weather extends React.Component {
             </span>
           </p>
         )}
-        {/* {this.props.tempMax && (
-          <p>
-            Temperature Max:{" "}
-            <span onClick={this.handleClicked.bind(this)}>
-              {this.calculateTemp(this.props.tempMax, this.props.displayUnits)}
-              &deg;
-              {this.props.displayUnits}
-            </span>
-          </p>
-        )} */}
         {this.props.humidity && (
           <p>
-            Humidity: <span>{this.props.humidity}%</span>
+            {" "}
+            <i className="fas fa-tint"></i> Humidity:{" "}
+            <span>{this.props.humidity}%</span>
           </p>
         )}
         {this.props.description && (
           <p>
-            Condition: <span>{this.props.description}</span>
-          </p>
-        )}
-        {/* {this.props.timezone && <p>Timezone: {this.props.timezone}</p>} */}
-        {this.props.error && (
-          <p>
-            <span>{this.props.error}</span>
+            {" "}
+            <i className="fas fa-bars"></i> Condition:{" "}
+            <span>{this.props.description}</span>
           </p>
         )}
         {this.props.pressure && (
           <p>
-            Pressure: <span>{this.props.pressure}hPa</span>
+            {" "}
+            <i className="fas fa-wind"></i> Pressure:{" "}
+            <span>{this.props.pressure} hPa</span>
           </p>
         )}
 
         {this.props.error && (
           <p>
+            {" "}
+            <i className="fas fa-exclamation"></i>{" "}
             <span>{this.props.error}</span>
           </p>
         )}
