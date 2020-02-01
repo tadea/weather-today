@@ -4,144 +4,146 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap");
 
-body {
-  font-family: "ZCOOL XiaoWei", serif;
-}
+@media screen {
+  body {
+    font-family: "ZCOOL XiaoWei", serif;
+  }
 
-.wrapper {
-  /* background: linear-gradient(to right, #f97f15e5, #f95a2a); */
-  background: whitesmoke;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-}
-.row {
-  margin-right: 69px;
-  margin-left: -15px;
-  box-shadow: 1px 0px 20px 0px #989898;
-}
+  .wrapper {
+    /* background: linear-gradient(to right, #f97f15e5, #f95a2a); */
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+  }
+  .row {
+    margin-right: 69px;
+    margin-left: -15px;
+    box-shadow: 1px 0px 20px 0px #989898;
+  }
 
-.main {
-  height: 90vh;
-  background: #fff;
-  box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
-  width: 80%;
-  margin: 0 auto;
-}
+  .main {
+    height: 90vh;
+    background: #fff;
+    box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+    width: 80%;
+    margin: 0 auto;
+  }
 
-.title-container {
-  height: 90vh;
-  background: url("images/sun.jpg") center center no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: rgb(92, 26, 0);
-}
+  .title-container {
+    height: 90vh;
+    background: url("images/sun.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(92, 26, 0);
+  }
 
-.title-container__title {
-  font-size: 50px;
-  letter-spacing: 2px;
-  line-height: 1.3;
-  font-family: "ZCOOL XiaoWei", serif;
-}
+  .title-container__title {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-family: "ZCOOL XiaoWei", serif;
+  }
 
-.title-container__subtitle {
-  font-style: italic;
-  font-weight: 100;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  font-family: "ZCOOL XiaoWei", serif;
-}
+  .title-container__subtitle {
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: "ZCOOL XiaoWei", serif;
+  }
 
-.title-container__clock {
-  font-weight: 100;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  font-family: "ZCOOL XiaoWei", serif;
-}
+  .title-container__clock {
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: "ZCOOL XiaoWei", serif;
+  }
 
-.form-container {
-  background-color: #193f48;
-  height: 90vh;
-  padding-top: 100px;
-  padding-left: 50px;
-}
+  .form-container {
+    background-color: #193f48;
+    height: 90vh;
+    padding-top: 100px;
+    padding-left: 50px;
+  }
 
-input[type="text"] {
-  background-color: transparent;
-  border: 0;
-  border-bottom: solid 1px #548192;
-  width: 30%;
-  padding-bottom: 4px;
-  color: #fff !important;
-  font-weight: medium;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  font-size: 20px;
-}
+  input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px #548192;
+    width: 30%;
+    padding-bottom: 4px;
+    color: #fff !important;
+    font-weight: medium;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
 
-input[type="text"] {
-  outline: none;
-}
+  input[type="text"] {
+    outline: none;
+  }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
-  -webkit-text-fill-color: #fff !important;
-}
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+  }
 
-button {
-  border: 0;
-  padding: 8px 30px;
-  margin: 0 2px;
-  border-radius: 30px;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: #548192;
-  color: #fff;
-  font-weight: 100;
-  cursor: pointer;
-}
+  button {
+    border: 0;
+    padding: 8px 30px;
+    margin: 0 2px;
+    border-radius: 30px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #548192;
+    color: #fff;
+    font-weight: 100;
+    cursor: pointer;
+  }
 
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.clicked {
-  background: #548192;
-  color: #e9f2f1;
-  outline: none;
-}
-button:active {
-  outline: none;
-}
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .clicked {
+    background: #548192;
+    color: #e9f2f1;
+    outline: none;
+  }
+  button:active {
+    outline: none;
+  }
 
-.weather__info {
-  width: 100%;
-  font-size: 15px;
-  font-weight: 200;
-  letter-spacing: 2px;
-}
+  .weather__info {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
 
-.weather__key {
-  color: #54c3ec;
-  border-bottom: solid 2px rgba(255, 255, 255, 0.06);
-  padding: 20px 0 20px 0;
-  font-weight: 400;
-}
+  .weather__key {
+    color: #54c3ec;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.06);
+    padding: 20px 0 20px 0;
+    font-weight: 400;
+  }
 
-.weather__key:last-child {
-  border: 0;
-}
+  .weather__key:last-child {
+    border: 0;
+  }
 
-.weather__value {
-  color: #fff;
-  font-weight: 200;
+  .weather__value {
+    color: #fff;
+    font-weight: 200;
+  }
 }
