@@ -18,31 +18,30 @@ class App extends React.Component {
     pressure: undefined,
     displayUnits: "F",
     error: undefined,
-    icon: undefined
+    icon: undefined,
   };
 
   toggleDisplayUnits() {
     this.state.displayUnits === "F"
       ? this.setState({
-          displayUnits: "C"
+          displayUnits: "C",
         })
       : this.setState({
-          displayUnits: "F"
+          displayUnits: "F",
         });
   }
 
-  getWeather = async e => {
+  getWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-
-    const api_call = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`
-    );
-
-    const data = await api_call.json();
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`;
 
     if (city && country) {
+      const api_call = await fetch(apiUrl);
+
+      const data = await api_call.json();
+
       this.setState({
         kelvinTemp: data.main.temp,
         tempMin: data.main.temp_min,
@@ -54,7 +53,7 @@ class App extends React.Component {
         pressure: data.main.pressure,
         unit: data.main.temp,
         error: "",
-        icon: data.weather[0].icon
+        icon: data.weather[0].icon,
       });
     } else {
       this.setState({
@@ -68,7 +67,7 @@ class App extends React.Component {
         pressure: undefined,
         unit: undefined,
         icon: undefined,
-        error: "Please Enter Correct Values"
+        error: "Please Enter Correct Values",
       });
     }
   };
