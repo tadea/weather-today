@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "tadea.github.io/weather-today/static/css/main.1e7c96d5.chunk.css",
-    "main.js": "tadea.github.io/weather-today/static/js/main.6a7b2e39.chunk.js",
-    "main.js.map": "tadea.github.io/weather-today/static/js/main.6a7b2e39.chunk.js.map",
-    "runtime-main.js": "tadea.github.io/weather-today/static/js/runtime-main.576a8f1c.js",
-    "runtime-main.js.map": "tadea.github.io/weather-today/static/js/runtime-main.576a8f1c.js.map",
-    "static/css/2.c5ad86cd.chunk.css": "tadea.github.io/weather-today/static/css/2.c5ad86cd.chunk.css",
-    "static/js/2.5738d831.chunk.js": "tadea.github.io/weather-today/static/js/2.5738d831.chunk.js",
-    "static/js/2.5738d831.chunk.js.map": "tadea.github.io/weather-today/static/js/2.5738d831.chunk.js.map",
-    "index.html": "tadea.github.io/weather-today/index.html",
-    "precache-manifest.1f705a0a540f3c0579bb4ce29cb2d2f1.js": "tadea.github.io/weather-today/precache-manifest.1f705a0a540f3c0579bb4ce29cb2d2f1.js",
-    "service-worker.js": "tadea.github.io/weather-today/service-worker.js",
-    "static/css/2.c5ad86cd.chunk.css.map": "tadea.github.io/weather-today/static/css/2.c5ad86cd.chunk.css.map",
-    "static/css/main.1e7c96d5.chunk.css.map": "tadea.github.io/weather-today/static/css/main.1e7c96d5.chunk.css.map",
-    "static/js/2.5738d831.chunk.js.LICENSE": "tadea.github.io/weather-today/static/js/2.5738d831.chunk.js.LICENSE",
-    "static/media/bootstrap.min.css": "tadea.github.io/weather-today/static/media/glyphicons-halflings-regular.fa277232.woff",
-    "static/media/App.css": "tadea.github.io/weather-today/static/media/sun.71f57de6.jpg"
+    "main.css": "/weather-today/static/css/main.e7d5af0b.chunk.css",
+    "main.js": "/weather-today/static/js/main.40e082cb.chunk.js",
+    "main.js.map": "/weather-today/static/js/main.40e082cb.chunk.js.map",
+    "runtime-main.js": "/weather-today/static/js/runtime-main.685cf6ed.js",
+    "runtime-main.js.map": "/weather-today/static/js/runtime-main.685cf6ed.js.map",
+    "static/css/2.e5adc83a.chunk.css": "/weather-today/static/css/2.e5adc83a.chunk.css",
+    "static/js/2.5738d831.chunk.js": "/weather-today/static/js/2.5738d831.chunk.js",
+    "static/js/2.5738d831.chunk.js.map": "/weather-today/static/js/2.5738d831.chunk.js.map",
+    "index.html": "/weather-today/index.html",
+    "precache-manifest.33f6030b30ab9f94f54534caf3f42fc4.js": "/weather-today/precache-manifest.33f6030b30ab9f94f54534caf3f42fc4.js",
+    "service-worker.js": "/weather-today/service-worker.js",
+    "static/css/2.e5adc83a.chunk.css.map": "/weather-today/static/css/2.e5adc83a.chunk.css.map",
+    "static/css/main.e7d5af0b.chunk.css.map": "/weather-today/static/css/main.e7d5af0b.chunk.css.map",
+    "static/js/2.5738d831.chunk.js.LICENSE": "/weather-today/static/js/2.5738d831.chunk.js.LICENSE",
+    "static/media/bootstrap.min.css": "/weather-today/static/media/glyphicons-halflings-regular.fa277232.woff",
+    "static/media/App.css": "/weather-today/static/media/sun.71f57de6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.576a8f1c.js",
-    "static/css/2.c5ad86cd.chunk.css",
+    "static/js/runtime-main.685cf6ed.js",
+    "static/css/2.e5adc83a.chunk.css",
     "static/js/2.5738d831.chunk.js",
-    "static/css/main.1e7c96d5.chunk.css",
-    "static/js/main.6a7b2e39.chunk.js"
+    "static/css/main.e7d5af0b.chunk.css",
+    "static/js/main.40e082cb.chunk.js"
   ]
 }
