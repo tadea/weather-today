@@ -35,40 +35,49 @@ class App extends React.Component {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`;
 
-    if (city && country) {
-      const api_call = await fetch(apiUrl);
+    const api_call = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`
+    );
 
-      const data = await api_call.json();
-
-      this.setState({
-        kelvinTemp: data.main.temp,
-        tempMin: data.main.temp_min,
-        tempMax: data.main.temp_max,
-        city: data.name,
-        country: data.sys.country,
-        humidity: data.main.humidity,
-        description: data.weather[0].description,
-        pressure: data.main.pressure,
-        unit: data.main.temp,
-        error: "",
-        icon: data.weather[0].icon,
-      });
-    } else {
-      this.setState({
-        kelvinTemp: undefined,
-        tempMin: undefined,
-        tempMax: undefined,
-        city: undefined,
-        country: undefined,
-        humidity: undefined,
-        description: undefined,
-        pressure: undefined,
-        unit: undefined,
-        icon: undefined,
-        error: "Please Enter Correct Values",
-      });
+    const data = await api_call.json();
+    try {
+      if (city && country) {
+        this.setState({
+          kelvinTemp: data.main.temp,
+          tempMin: data.main.temp_min,
+          tempMax: data.main.temp_max,
+          city: data.name,
+          country: data.sys.country,
+          humidity: data.main.humidity,
+          description: data.weather[0].description,
+          pressure: data.main.pressure,
+          unit: data.main.temp,
+          error: "",
+          icon: data.weather[0].icon,
+        });
+      } else {
+        this.setState({
+          kelvinTemp: undefined,
+          tempMin: undefined,
+          tempMax: undefined,
+          city: undefined,
+          country: undefined,
+          humidity: undefined,
+          description: undefined,
+          pressure: undefined,
+          unit: undefined,
+          icon: undefined,
+          error: "Please Enter Correct Values",
+        });
+      }
+    } catch (error) {
+      // if (error.response) {
+      //   console.log(error.response.data);
+      //   this.setState({ error: error.response.data.message });
+      // } else {
+      alert("Sorry, we don't recognise this input");
+      //}
     }
   };
 
