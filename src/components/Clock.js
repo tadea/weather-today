@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 class Clock extends React.Component {
   constructor(props) {
@@ -24,17 +25,18 @@ class Clock extends React.Component {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date(),
     });
   }
 
   render() {
     return (
-      <div>
+      <div className="container">
         <p>Your Local Time and Date</p>
-        <p>
-          {this.state.date.toLocaleTimeString()} || {this.getCurrentDate()}.
-        </p>
+        <i class="far fa-clock"></i>{" "}
+        {this.state.date.toLocaleTimeString()}<br></br>
+        <i class="far fa-calendar-alt"></i>{" "}
+        {this.getCurrentDate()}.
       </div>
     );
   }
