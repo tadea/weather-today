@@ -3,6 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Weather Today
 <a href="https://imgflip.com/gif/3nvmqa"><img src="https://i.imgflip.com/3nvmqa.gif" title="made at imgflip.com"/></a>
 
+## Demo
+[Weather Today](https://tadea.github.io/weather-today/)
+
 ## About
 This project was built for learning purposes
 
