@@ -1,8 +1,10 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Weather from "./components/Weather";
 import Title from "./components/Title";
 import Form from "./components/Form";
+import Clock from "./components/Clock";
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
@@ -17,7 +19,7 @@ class App extends React.Component {
     description: undefined,
     pressure: undefined,
     displayUnits: "F",
-    error: undefined,
+    error: false,
     icon: undefined,
   };
 
@@ -53,7 +55,7 @@ class App extends React.Component {
           description: data.weather[0].description,
           pressure: data.main.pressure,
           unit: data.main.temp,
-          error: "",
+          error: false,
           icon: data.weather[0].icon,
         });
       } else {
@@ -72,44 +74,31 @@ class App extends React.Component {
         });
       }
     } catch (error) {
-      // if (error.response) {
-      //   console.log(error.response.data);
-      //   this.setState({ error: error.response.data.message });
-      // } else {
-      alert("Sorry, we don't recognise this input");
-      //}
+      alert("Sorry, try again!");
     }
   };
 
   render() {
     return (
-      <div className="wrapper">
-        <div className="main">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-5 title-container">
-                <Title />
-              </div>
-              <div className="col-xs-7 form-container">
-                <Form getWeather={this.getWeather} />
-                <Weather
-                  kelvinTemp={this.state.kelvinTemp}
-                  tempMin={this.state.tempMin}
-                  tempMax={this.state.tempMax}
-                  city={this.state.city}
-                  country={this.state.country}
-                  humidity={this.state.humidity}
-                  description={this.state.description}
-                  pressure={this.state.pressure}
-                  displayUnits={this.state.displayUnits}
-                  clickHandler={this.toggleDisplayUnits.bind(this)}
-                  error={this.state.error}
-                  icon={this.state.icon}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="App">
+        <Title />
+        <Clock />
+
+        <Form getWeather={this.getWeather} />
+        <Weather
+          kelvinTemp={this.state.kelvinTemp}
+          tempMin={this.state.tempMin}
+          tempMax={this.state.tempMax}
+          city={this.state.city}
+          country={this.state.country}
+          humidity={this.state.humidity}
+          description={this.state.description}
+          pressure={this.state.pressure}
+          displayUnits={this.state.displayUnits}
+          clickHandler={this.toggleDisplayUnits.bind(this)}
+          error={this.state.error}
+          icon={this.state.icon}
+        />
       </div>
     );
   }
