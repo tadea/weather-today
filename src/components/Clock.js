@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import Container from "./Container";
 
 class Clock extends React.Component {
   constructor(props) {
@@ -12,16 +13,18 @@ class Clock extends React.Component {
     let date = newDate.getDate();
     let month = newDate.getMonth() + 1;
     let year = newDate.getFullYear();
-
+    // returning complet data object
     return month + "-" + date + "-" + year;
   }
+
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
   }
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+  //  Why you have added this functoin here ? we don't need it.
+  // componentWillUnmount() {
+  //   clearInterval(this.timerID);
+  // }
 
   tick() {
     this.setState({
@@ -31,13 +34,12 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <Container>
         <p>Your Local Time and Date</p>
-        <i class="far fa-clock"></i>{" "}
-        {this.state.date.toLocaleTimeString()}<br></br>
-        <i class="far fa-calendar-alt"></i>{" "}
-        {this.getCurrentDate()}.
-      </div>
+        <i className="far fa-clock"></i> {this.state.date.toLocaleTimeString()}
+        <br></br>
+        <i className="far fa-calendar-alt"></i> {this.getCurrentDate()}.
+      </Container>
     );
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import "../form.css";
+import Container from '../components/Container'
+
 
 const Form = (props) => {
   return (
-    <div className="container">
+   <Container>
       <form onSubmit={props.getWeather}>
         <div className="row">
           <div className="col-md-3 offset-md-2">
@@ -27,7 +29,7 @@ const Form = (props) => {
           </div>
         </div>
       </form>
-    </div>
+    </Container>
   );
 };
 
