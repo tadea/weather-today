@@ -13,7 +13,7 @@ class Clock extends React.Component {
     let date = newDate.getDate();
     let month = newDate.getMonth() + 1;
     let year = newDate.getFullYear();
-    // returning complet data object
+    // returning compleat date object
     return month + "-" + date + "-" + year;
   }
 
